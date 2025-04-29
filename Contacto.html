@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Nintendo</title>
+    <link rel="stylesheet" href="css/ContactoPrueba.css">
+    <!-- TODO: FAVICON -->
+</head>
+<body>
+    <div class="contenedor">
+        <div class="menu">
+            <header>
+                <img class="logo-nintendo" src="img/NintendoLogo.png" alt="Logo Nintendo">
+                <div class="newstitulo">NEWS</div>
+            </header>
+        </div>
+        
+        <form class="formulario">
+            <h1>Contacta con Nintendo News</h1>
+            <div class="contenedor2">
+                <div class="input-contenedor">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                
+                <div class="input-contenedor">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                
+                <div class="input-contenedor">
+                    <label for="asunto">Asunto *</label>
+                    <select name="asunto" id="asunto" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="">Publicar una noticia</option>
+                        <option value="purchase">Quejas</option>
+                        <option value="suggestion">Sugerencias</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </div>
+                
+                
+                
+                <div class="input-contenedor">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea name="mensaje" id="mensaje" required></textarea>
+                </div>
+                
+                <div class="input-contenedor">
+                    <label>
+                        <input type="checkbox" name="terminos" required>
+                        Acepto la <a href="https://www.nintendo.com/es-es/Informacion-legal/Politica-de-privacidad-de-este-sitio-web/Politica-de-privacidad-de-este-sitio-web-637785.html?srsltid=AfmBOooesylzKdEOYDFu9O2A8QF6jr1B0XiKjbBEVrWb0cGBU7TIsNZW">política de privacidad</a> y los <a href="https://www.nintendo.com/es-mx/terms-of-use/?srsltid=AfmBOoq3UNrO3y6n7W6YzJxnk4pyfsSwshid8IsGiAKi-xYri_woKQr8">términos y condiciones</a>. *
+                    </label>
+                </div>
+                
+                <div class="input-contenedor">
+                    <label>
+                        <input type="checkbox" name="noticias">
+                        Deseo recibir noticias y ofertas de Nintendo.
+                    </label>
+                </div>
+                
+                <button type="submit" class="button">Enviar mensaje</button>
+                
+                <div class="formulario-footer">
+                    <p>Los campos marcados con * son obligatorios.</p>
+                    <p>La información proporcionada será tratada según nuestra <a href="https://www.nintendo.com/es-pe/privacy-policy/?srsltid=AfmBOop3uMVCuDnlHaItvdbMwFNGj_UBQQ_O0AMuXg2eimO6FCa230E-">política de privacidad</a>.</p>
+                </div>
+            </div>    
+        </form>
+
+        <div class="volver-home"><a href="index.html">Volver a la web</a></div>
+    </div>
+</body>
+</html>            
+            
+    

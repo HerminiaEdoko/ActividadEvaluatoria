@@ -1,0 +1,302 @@
+/*AJUSTAR LA PÁGINA A LOS LÍMITES DE LA PANTALLA*/
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-height: 100vh;
+}
+/* CSS MENU */
+body{
+    text-align: center;
+    background-image: url(../img/fondomario.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+
+.contenedor{
+    text-align: center;
+    display: flex;
+}
+
+
+.menu{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(255, 255, 255);
+    background-image: url('../img/fondomenu.jpg');
+    background-position: center;
+    background-size: 100%;
+    text-align: center;
+    z-index: 1000;
+    
+
+}
+
+
+.menu-inicio{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+    z-index: 2;
+    
+}
+
+.newstitulo{
+    font-weight: bolder;
+    margin-left: 150px;
+}
+
+
+
+.menu-inicio li{
+    margin-right: 30px;
+    border-right: 2px solid white;
+    padding-right: 30px;
+
+}
+
+li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;   
+}
+
+li a:hover{
+    color: black;
+}
+
+
+.logo-nintendo{
+    padding-top: 20px;
+    width: 20%;
+}
+
+.pie{
+    
+    position: fixed;
+    background-color: rgb(39, 12, 12);
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: right;
+    width: 100%;    
+}
+
+
+
+/* FIN CSS MENU */
+
+/* CSS WEB CONSOLAS */
+
+/* MENU IZQUIERDA */
+.info{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 400px;
+    height: 50px;
+    line-height: 25px;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 0px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 10px;
+}
+
+.menuconsolas {
+    margin-top: 200px;
+    width: 100%;
+}
+
+.menuconsolas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* CADA LI */
+.menuconsolas > ul > li {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; 
+    line-height: 60px;
+    padding: 5px;
+    background: #f00202;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    
+}
+
+
+.menuconsolas > ul > li:hover {
+    background: #ffffff;
+    color: red;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/*SUBMENU */
+.submenu {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    width: 300px; 
+    
+}
+
+.submenu li {
+    border: 1px solid #ffffff;
+    font-size: 15px;
+    height: 60px;
+    border-radius: 20px;
+    margin-left: 10px;
+    background-color: red;
+    margin-top: 5px;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+.submenu li a:hover {
+    color: black;
+    border-radius: 20px;
+}
+
+
+.menuconsolas ul li:hover > .submenu {
+    display: block; 
+}
+
+/* Info-derecha */
+
+.info-derecha{
+    background-color: rgb(243, 145, 64);
+    margin-left: 60%;
+    margin-top: 200px;
+    margin-right: 50px;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px black;
+    width: 100%;
+    height: fit-content;
+    
+
+}
+
+.info-derecha h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.info-derecha p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info-derecha p a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-derecha p a:hover{
+    color: white;
+}
+
+/* RESPONSIVE */
+
+/* Para más de 1300px de ancho */
+@media (min-width: 1300px) {
+    body{
+        width: 100%;
+
+    }
+}
+
+ /* Entre 1000 y 1300 (tablet horizontal o laptops)*/
+ @media (min-width: 1000px) and (max-width:1300px) {
+    body{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }    
+
+    
+}
+
+
+
+ /* Teléfono vertical y tablet vertical*/
+ @media (min-width: 400px) and (max-width:890px){
+    body{
+        width: 100%;
+    }
+
+   .menuconsolas{
+    margin-top: 230px;
+   }
+
+
+   .submenu{
+    z-index: 2000;
+   }
+
+   
+    .menu-inicio{
+        display: block;
+        line-height: 40px;        
+        padding: 0px;
+        text-align: left;
+        
+        
+    }
+    .menu-inicio li{
+        
+        border-right: none;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    .menu-inicio li a{
+        font-size: 12px;
+    }
+
+    
+
+    .info-derecha{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

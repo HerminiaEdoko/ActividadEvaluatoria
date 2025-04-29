@@ -1,0 +1,262 @@
+/*AJUSTAR LA PÁGINA A LOS LÍMITES DE LA PANTALLA*/
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
+}
+
+body{
+    text-align: center;
+    background-color: white;
+    display: flex;
+    height: 100%;
+    margin-top: 200px;
+    /* evitar scroll (nada sale del body) */
+    
+    
+}
+
+.contenedor{
+    text-align: center;
+    background-color: white;
+    
+    /* añadido para este css concreto */
+    display: flex;
+    
+}
+
+.menu{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(255, 255, 255);
+    background-image: url('../img/fondomenu.jpg');
+    background-position: center;
+    background-size: 100%;
+    text-align: center;
+    z-index: 1000;
+    
+
+}
+
+.menu-inicio{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    margin-top: 15px
+    
+}
+.newstitulo{
+    font-weight: bolder;
+    margin-left: 150px;
+}
+
+li{
+    margin-right: 30px;
+    border-right: 2px solid white;
+    padding-right: 30px;
+}
+
+a{
+    color: white;
+    text-decoration: none;   
+}
+
+a:hover{
+    color: black;
+    
+}
+
+
+
+.logo-nintendo{
+    padding-top: 20px;
+    width: 20%;
+
+}
+
+.pie{
+    
+    position: fixed;
+    background-color: rgb(39, 12, 12);
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: right;
+    width: 100%;    
+}
+
+/* CSS PROPIO DE LA PÁGINA */
+
+body{
+    /* Para alinear las cartas mejor usamos las siguientes propiedades */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    /* Debemos poner una separación de márgenes con el resto de cartas */
+    margin: 50px;
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Para determinar si la cara trasera de un elemento es visible o no */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s;
+
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 10px 10px black;
+}
+
+.card .front .img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Indicar cómo el contenido del elemento deberá ser redimensionado para ajustarse a su contenedor */
+    object-fit: cover;
+
+}
+
+.card .front h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background: rgba(255, 13, 0, 0.8);
+    text-align: center;
+}
+
+.card .back{
+    font-weight: bold;
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(250, 17, 0);
+    padding: 15px;
+    color: #f3f3f3;
+    box-shadow: 0px 5px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card .back p{
+    letter-spacing: 1px;
+    margin-top: 120px;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.contenedor-secundario{
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    
+}
+
+/* RESPONSIVE */
+/* Para más de 1300px de ancho */
+@media (min-width: 1300px) {
+    body{
+        width: 100%;
+    }
+}
+ /* Entre 1000 y 1300 (tablet horizontal o laptops)*/
+@media (min-width: 1000px) and (max-width:1300px) {
+    body{
+        width: 100%;
+    }    
+
+    .contenedor{
+        margin-top: 10px;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+}
+/* Entre 750 y 1000 (tablet vertical) */
+@media (min-width: 500px) and (max-width:999px){
+    body{
+        width: 100%;
+    }
+
+    .contenedor{
+        margin-top: 10px;
+        margin-right: 20px;
+        flex-direction: column;
+    }
+
+    .info-derecha{
+        width: 200px;
+    }
+
+}
+
+
+ /* Teléfono vertical */
+ @media (min-width: 400px) and (max-width:700px){
+    body{
+        width: 100%;
+    }
+
+    .contenedor{
+        margin-top: 10px;
+        flex-direction: column;
+        padding:10px;
+    }
+
+    .menu-inicio{
+        display: block;
+        line-height: 40px;        
+        border-right: none;
+        padding: 0px;
+        text-align: left;
+        
+    }
+    .menu-inicio li a{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    li{
+        border-right: none;
+    }
+
+   
+
+    
+    
+
+   
+}

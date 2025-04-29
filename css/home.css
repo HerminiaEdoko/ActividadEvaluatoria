@@ -1,0 +1,371 @@
+/*AJUSTAR LA PÁGINA A LOS LÍMITES DE LA PANTALLA*/
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-height: 100vh;
+    
+}
+
+body{
+    text-align: center;
+    background-color: white;
+}
+
+.contenedor{
+    text-align: center;
+    background-color: white;
+    margin-top: 10px;
+    margin: 2px;
+}
+
+.menu{
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(255, 255, 255);
+    background-image: url('../img/fondomenu.jpg');
+    background-position: center;
+    background-size: 100%;
+    text-align: center;
+}
+
+.menu-inicio{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    
+}
+
+.logo-nintendo{
+    padding-top: 20px;
+    width: 20%;
+}
+
+.newstitulo{
+    font-weight: bolder;
+    margin-left: 150px;
+}
+
+
+
+.titular {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    color: red; 
+    font-size: 60px;
+}
+
+
+
+li{
+    margin-right: 30px;
+    border-right: 2px solid white;
+    padding-right: 30px;
+
+}
+
+li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;   
+}
+
+li a:hover{
+    color: black;
+}
+
+h2{
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+.contenido{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 0px;
+}
+
+.seccion{
+
+    font-size: 20px;
+    text-align: left;
+    color: black;
+    width: 65%;
+    background-color: white;
+    padding-top: 20px;
+    margin-left: 0px;
+
+}
+
+.aside{
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    padding-left: 30px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a{
+    color: blue;
+}
+
+.foto-articulo{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+.aside h3{
+    color: red;
+    text-decoration:underline ;
+    text-align: left;
+}
+
+.aside article{
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 7px;
+}
+.aside article:hover {
+    box-shadow: 0px 5px 5px black;
+    background-color: rgb(250, 224, 224);
+}
+
+.pie{
+    
+    position: fixed;
+    background-color: rgb(39, 12, 12);
+    margin: 0px;
+    left: 0px;
+    padding: 10px;
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: right;
+    width: 100%;    
+}
+/*Ancho fijo de resoluciones de mas de 1300px de ancho*/
+@media (min-width: 1301px) {    
+    .contenedor {
+        width: 1500px;
+        margin: 30px;
+    }
+   
+}
+
+/*Tablet en posición horizontal*/
+@media (min-width: 769px) and (max-width: 1300px) and (orientation: landscape) {
+    .contenedor {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .menu {
+        height: 100px;
+    }
+    
+    .logo-nintendo {
+        width: 15%;
+    }
+    
+    .titular {
+        font-size: 50px;
+    }
+    
+    .contenido {
+        margin-top: 120px;
+    }
+}
+/*Tablet en posición vertical*/
+@media (min-width: 600px) and (max-width: 768px) and (orientation: portrait) {
+    .contenedor {
+        width: 100%;
+        padding: 10px;
+    }
+    .menu {
+        height: 100px;
+    }
+    
+    .logo-nintendo {
+        width: 25%;
+    }
+    
+    .titular {
+        font-size: 40px;
+    }
+    
+    .menu-inicio {
+        flex-wrap: wrap;
+    }
+    
+    li {
+        margin-right: 15px;
+        padding-right: 15px;
+    }
+    
+    .newstitulo {
+        margin-left: 0;
+    }
+    
+    .contenido {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    
+    .seccion {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .aside {
+        width: 100%;
+        padding: 15px;
+    }
+}    
+/* Teléfono en posición horizontal */
+@media (max-width: 700px) and (orientation: landscape) {
+    .menu {
+        height: 80px;
+    }
+    
+    .logo-nintendo {
+        width: 15%;
+        padding-top: 10px;
+    }
+    
+    .titular {
+        font-size: 30px;
+    }
+    
+    .menu-inicio {
+        flex-wrap: wrap;
+    }
+    
+    li {
+        margin-right: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+        
+    }
+    
+    .newstitulo {
+        margin-left: 0;
+    }
+    
+    .contenido {
+        margin-top: 80px;
+        flex-direction: column;
+    }
+
+    .menu-inicio{
+        margin-top: 65px;
+    }
+    
+    .seccion {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .aside {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    .pie {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}    
+/* Teléfono en posición vertical */
+@media (min-width: 400px) and (max-width:600px)  {
+    .menu {
+        height: 70px;
+    }
+
+    .menu-inicio{
+        display: block;
+        line-height: 40px;        
+        padding: 0px;
+        text-align: left;
+        
+    }
+    .menu-inicio li a{
+        font-size: 20px;
+        padding-left: 20px;
+        
+    }
+
+   li{
+    border-right: none;
+   }
+
+    .contenedor{
+        margin-top: 280px;
+
+    }
+    
+    .logo-nintendo {
+        width: 30%;
+        padding-top: 5px;
+    }
+    
+    .titular {
+        font-size: 24px;
+    }
+    
+    .menu-inicio {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border-top: 0px;
+    }
+    
+    li {
+        margin-right: 5px;
+        padding-right: 5px;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .newstitulo {
+        margin-left: 0;
+    }
+    
+    .contenido {
+        margin-top: 70px;
+        flex-direction: column;
+    }
+    
+    .seccion {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .aside {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    
+    .pie {
+        font-size: 10px;
+        line-height: 18px;
+        text-align: center;
+    }
+}    
